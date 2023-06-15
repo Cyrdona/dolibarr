@@ -1049,6 +1049,9 @@ if (empty($conf->global->TAKEPOS_HIDE_HEAD_BAR)) {
 				?>
 			</div>
 			<div id="topnav-right" class="topnav-right">
+				<div class="login_block_other">
+				
+				</div>
 				<div class="login_block_user">
 				<?php
 				print top_menu_user(1);
