@@ -1049,15 +1049,6 @@ if (empty($conf->global->TAKEPOS_HIDE_HEAD_BAR)) {
 				?>
 			</div>
 			<div id="topnav-right" class="topnav-right">
-				<div class="login_block_other">
-				<input type="text" id="search" name="search" class="input-search-takepos" onkeyup="Search2('<?php echo dol_escape_js($keyCodeForEnter); ?>', null);" placeholder="<?php echo dol_escape_htmltag($langs->trans("Search")); ?>" autofocus>
-				<a onclick="ClearSearch();"><span class="fa fa-backspace"></span></a>
-				<a href="<?php echo DOL_URL_ROOT.'/'; ?>" target="backoffice" rel="opener"><!-- we need rel="opener" here, we are on same domain and we need to be able to reuse this tab several times -->
-				<span class="fas fa-home"></span></a>
-				<?php if (empty($conf->dol_use_jmobile)) { ?>
-				<a class="hideonsmartphone" onclick="FullScreen();"><span class="fa fa-expand-arrows-alt"></span></a>
-				<?php } ?>
-				</div>
 				<div class="login_block_user">
 				<?php
 				print top_menu_user(1);

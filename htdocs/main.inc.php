@@ -2151,7 +2151,7 @@ function top_menu($head, $title = '', $target = '', $disablejs = 0, $disablehead
 		// Logout link
 		$toprightmenu .= $form->textwithtooltip('', $logouthtmltext, 2, 1, $logouttext, 'login_block_elem logout-btn', 2);
 
-		$toprightmenu .= '</div>'; // end div class="login_block_other"
+		// $toprightmenu .= '</div>'; // end div class="login_block_other"
 
 
 		// Add login user link
