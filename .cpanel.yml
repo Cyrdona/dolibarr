@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/hlgs4475/repositories/dolibarr/htdocs 
+    - /bin/cp -R index.php $DEPLOYPATH
