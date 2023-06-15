@@ -116,7 +116,7 @@ $toprightmenu .= '</div></div>';
 
 $toprightmenu .= '</div>'."\n";
 
-// $toprightmenu .= '<div class="login_block_other">';
+$toprightmenu .= '<div class="login_block_other">';
 
 // Execute hook printTopRightMenu (hooks should output string like '<div class="login"><a href="">mylink</a></div>')
 $parameters = array();
