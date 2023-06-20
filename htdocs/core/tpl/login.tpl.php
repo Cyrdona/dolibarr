@@ -50,7 +50,7 @@ $arrayofjs=array(
 	'/includes/jstz/jstz.min.js'.(empty($conf->dol_use_jmobile)?'':'?version='.urlencode(DOL_VERSION)),
 	'/core/js/dst.js'.(empty($conf->dol_use_jmobile)?'':'?version='.urlencode(DOL_VERSION))
 );
-$titleofloginpage=$langs->trans('Login').' @ '.$titletruedolibarrversion;	// $titletruedolibarrversion is defined by dol_loginfunction in security2.lib.php. We must keep the @, some tools use it to know it is login page and find true dolibarr version.
+$titleofloginpage=$langs->trans('Login'); //' @ '.$titletruedolibarrversion;  $titletruedolibarrversion is defined by dol_loginfunction in security2.lib.php. We must keep the @, some tools use it to know it is login page and find true dolibarr version.
 
 $disablenofollow=1;
 if (! preg_match('/'.constant('DOL_APPLICATION_TITLE').'/', $title)) $disablenofollow=0;
@@ -58,7 +58,7 @@ if (! preg_match('/'.constant('DOL_APPLICATION_TITLE').'/', $title)) $disablenof
 print top_htmlhead('', $titleofloginpage, 0, 0, $arrayofjs, array(), 0, $disablenofollow);
 
 
-$colorbackhmenu1='60,70,100';      // topmenu
+$colorbackhmenu1='155,45,140';;      // topmenu
 if (! isset($conf->global->THEME_ELDY_TOPMENU_BACK1)) $conf->global->THEME_ELDY_TOPMENU_BACK1=$colorbackhmenu1;
 $colorbackhmenu1 = empty($user->conf->THEME_ELDY_ENABLE_PERSONALIZED)?(empty($conf->global->THEME_ELDY_TOPMENU_BACK1)?$colorbackhmenu1:$conf->global->THEME_ELDY_TOPMENU_BACK1):(empty($user->conf->THEME_ELDY_TOPMENU_BACK1)?$colorbackhmenu1:$user->conf->THEME_ELDY_TOPMENU_BACK1);
 $colorbackhmenu1 = join(',', colorStringToArray($colorbackhmenu1));    // Normalize value to 'x,y,z'
@@ -88,7 +88,7 @@ $(document).ready(function () {
 </script>
 <?php } ?>
 
-<div class="login_center center"<?php print empty($conf->global->MAIN_LOGIN_BACKGROUND)?' style="background-size: cover; background-position: center center; background-attachment: fixed; background-repeat: no-repeat; background-image: linear-gradient(rgb('.$colorbackhmenu1.',0.3), rgb(240,240,240));"':'' ?>>
+<div class="login_center center"<?php print empty($conf->global->MAIN_LOGIN_BACKGROUND)?' style="background-size: cover; background-position: center center; background-attachment: fixed; background-repeat: no-repeat; background-image: linear-gradient(rgb('.$colorbackhmenu1.',0.3), red);"':'' ?>>
 <div class="login_vertical_align">
 
 <form id="login" name="login" method="post" action="<?php echo $php_self; ?>">
@@ -121,7 +121,7 @@ if ($disablenofollow) echo '</a>';
 
 
 
-<div class="login_table">
+<div class="login_table" style="border-radius: 1.5rem">
 
 <div id="login_line1">
 
@@ -209,7 +209,7 @@ if ($captcha) {
 <div id="login_line2" style="clear: both">
 
 <!-- Button Connection -->
-<br><input type="submit" class="button" value="&nbsp; <?php echo $langs->trans('Connection'); ?> &nbsp;" tabindex="5" />
+<br><input type="submit" class="button" style="border-radius: 1rem; background: green; color:white" value="&nbsp; <?php echo $langs->trans('Connection'); ?> &nbsp;" tabindex="5" />
 
 <?php
 if ($forgetpasslink || $helpcenterlink)
@@ -304,7 +304,7 @@ if (!empty($conf->global->MAIN_EASTER_EGG_COMMITSTRIP)) {
 <?php if ($main_home)
 {
 ?>
-	<div class="center login_main_home paddingtopbottom <?php echo empty($conf->global->MAIN_LOGIN_BACKGROUND)?'':' backgroundsemitransparent'; ?>" style="max-width: 70%">
+	<div class="center login_main_home paddingtopbottom <?php echo empty($conf->global->MAIN_LOGIN_BACKGROUND)?'':' backgroundsemitransparent'; ?>" style="max-width: 50%">
 	<?php echo $main_home; ?>
 	</div><br>
 <?php
